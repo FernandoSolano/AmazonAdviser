@@ -2,14 +2,14 @@
 <queries>
     <query>
         <keywords>Funkos</keywords>
-        <queryLimit>5</queryLimit>
+        <queryLimit>2</queryLimit>
     </query>
     <query>
         <keywords>Consoles</keywords>
-        <queryLimit>3</queryLimit>
+        <queryLimit>2</queryLimit>
     </query>
     <query>
         <keywords>SSD</keywords>
-        <queryLimit>3</queryLimit>
+        <queryLimit>2</queryLimit>
     </query>
 </queries>
