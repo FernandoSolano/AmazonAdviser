@@ -12,4 +12,10 @@
         <keywords>GPU</keywords>
         <queryLimit>2</queryLimit>
     </query>
+    <email>
+        <username>pruebasolano148</username>
+        <password>solanoso</password>
+        <from>pruebasolano148@gmail.com</from>
+        <to>fernando.solanocarballo@outlook.com</to>
+    </email>
 </queries>

@@ -1,4 +1,5 @@
 import domain.Query;
+import mail.MailController;
 import selenium.QueryController;
 import xml.Utils;
 
@@ -10,7 +11,7 @@ public class MainClass {
         LinkedList<Query> queries = Utils.fetchQueries();
         QueryController qc = new QueryController();
         qc.getProductsFromQueries(queries);
-        //Send items by email
+        MailController.sendNew();
     }
 
 }
