@@ -20,7 +20,7 @@ public class Utils {
         return parseDocument(getDocument());
     }
 
-    private static Document getDocument(){
+    private static Document getDocument() {
         File file = new File("C:/Users/fsolano/Documents/GitHub/AmazonAdviser/Query Samples/Sample2.xml");
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
                 .newInstance();
@@ -47,8 +47,8 @@ public class Utils {
         int queriesQuantity = queriesRawList.getLength();
         for (int i = 0; i < queriesQuantity; i++) {
             Node rawQuery = queriesRawList.item(i);
-            if(rawQuery.getNodeType() == Node.ELEMENT_NODE){
-                Element queryElement = (Element)rawQuery;
+            if (rawQuery.getNodeType() == Node.ELEMENT_NODE) {
+                Element queryElement = (Element) rawQuery;
                 //Values retrieval
                 NodeList keywordsList = queryElement.getElementsByTagName("keywords");
                 NodeList queryLimitList = queryElement.getElementsByTagName("queryLimit");

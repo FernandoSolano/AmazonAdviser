@@ -8,7 +8,8 @@ public class MainClass {
 
     public static void main(String[] args) {
         LinkedList<Query> queries = Utils.fetchQueries();
-        QueryController.executeQueries(queries);
+        QueryController qc = new QueryController();
+        qc.getProductsFromQueries(queries);
         //Send items by email
     }
 

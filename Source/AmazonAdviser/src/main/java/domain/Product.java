@@ -2,12 +2,12 @@ package domain;
 
 public class Product {
     private String name, description, url;
-    private float price;
+    private double price;
 
     public Product() {
     }
 
-    public Product(String name, String description, String url, float price) {
+    public Product(String name, String description, String url, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -34,15 +34,15 @@ public class Product {
         return url;
     }
 
-    public void serUrl(String url) {
+    public void setUrl(String url) {
         this.url = url;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

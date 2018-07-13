@@ -6,7 +6,7 @@ import selenium.CommonDriver;
 
 public class MainSite {
 
-    public static void goTo(){
+    public static void goTo() {
         CommonDriver.webDriver.get("https://www.amazon.com/");
     }
 

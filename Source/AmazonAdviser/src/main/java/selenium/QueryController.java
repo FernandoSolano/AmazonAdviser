@@ -1,15 +1,23 @@
 package selenium;
 
+import domain.Product;
 import domain.Query;
 import org.openqa.selenium.NoSuchElementException;
 import pageObjects.MainSite;
+import pageObjects.ProductSite;
 import pageObjects.SearchResultsSite;
 
 import java.util.LinkedList;
 
-public class QueryController {
+public class QueryController implements QueryInterface {
 
-    public static void executeQueries(LinkedList<Query> queries) {
+    public static LinkedList<Product> products;
+
+    public QueryController() {
+        products = new LinkedList<Product>();
+    }
+
+    public void getProductsFromQueries(LinkedList<Query> queries) {
         //Browse
         MainSite.goTo();
         for (Query query : queries
@@ -20,15 +28,16 @@ public class QueryController {
         CommonDriver.webDriver.close();
     }
 
-    public static void searchFor(Query query){
+    public void searchFor(Query query) {
         int queryLimit = query.getQueryLimit();
         MainSite.searchFor(query.getKeywords());
         //ClickProduct
-        for (int i=0; i<queryLimit; i++){
-            try{
+        for (int i = 0; i < queryLimit; i++) {
+            try {
                 SearchResultsSite.clickOnItem(i);
-                CommonDriver.webDriver.navigate().back();
-            }catch (NoSuchElementException e){
+                ProductSite.addItemToList();
+                ProductSite.goBack();
+            } catch (NoSuchElementException e) {
                 System.out.print(e);
                 queryLimit++;
             }
