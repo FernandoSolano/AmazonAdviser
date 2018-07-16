@@ -80,6 +80,10 @@ public class MailController {
                 "            overflow-wrap: break-word;\n" +
                 "            /* Renamed property in CSS3 draft spec */\n" +
                 "        }\n" +
+                "        .rhead {\n" +
+                "            border-right: 1px solid #ddd;\n" +
+                "            border-bottom: 1px solid #ddd;\n" +
+                "        }\n" +
                 "    </style>\n" +
                 "</head>\n" +
                 "\n" +
@@ -105,7 +109,7 @@ public class MailController {
 
             products +=
                     "            <tr>\n" +
-                            "                <th scope=\"row\">$"+product.getPrice()+"</th>\n" +
+                            "                <th scope=\"row\" class=\"rhead\">$"+product.getPrice()+"</th>\n" +
                             "                <td>" + product.getName() + "</td>\n" +
                             "                <td>\n" +
                             "                    <p>" + product.getDescription() + "</p>\n" +
